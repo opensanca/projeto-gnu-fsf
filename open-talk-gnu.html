@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>O Projeto GNU</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        font-size: 130%;
+        color: #fec418;
+        background-color: #2f1e2e;
+      }
+      .big-header h1, h2, h3 {
+        font-size: 600%;
+      }
+      .med-header h1, h2, h3 {
+        font-size: 400%;
+      }
+      hr {
+        height: 1px;
+        color: #b9b6b0;
+        background-color: #b9b6b0;
+        font-size: 0;
+        border: 0;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content {
+          background-color: #2f1e2e;
+          color: #b9b6b0;
+      }
+      .remark-slide-content p, li { font-size: 140% }
+      .remark-slide-content a { color: #ef6155; }
+      .section { background-color: #e7e9db; }
+      .section h1, h2, h3 {
+        background-color: #e7e9db;
+        color: #ef6155;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# O Projeto GNU e a Free Software Foundation
+
+<hr />
+
+Rafael Beraldo
+
+13 de agosto de 2016<br />
+OpenSanca
+
+---
+class: middle, big-header
+
+# Conteúdo
+
+- História e filosofia do Projeto GNU e da FSF
+- RMS, ESR e Linus
+- Linux
+- Free Software × Open Source
+
+---
+class: middle, big-header
+
+# Sobre @rberaldo
+
+- letras & PLN
+- workshop de LaTeX
+- www-pt-br
+
+???
+Fiz letras, mas gosto de integrar áreas. Software livre pode ter um papel maior
+na vida de todos. Minha relação com o GNU.
+
+---
+class: center, middle, big-header, section
+
+# Pré-história
+
+???
+Essa apresentação, como um todo, é baseada nesse artigo:
+https://www.gnu.org/gnu/thegnuproject.html
+
+---
+background-image: url(img/dec-pdp-10.jpg)
+class: center, bottom
+
+# DEC PDP-10
+
+???
+Nossa história começa no AI Lab do MIT, criado pelo lendário Marvin Minsky.  A
+série de computadores da Digital Equipment Corporation (DEC), produzidos de
+1966 a 1980, faz parte do folclore hacker, porque muitas universidades como
+Harvard, MIT, Stanford e Carnegie Mellon usavam esse sistema.
+
+---
+class: center, middle, big-header
+
+# ITS: Incompatible Timesharing System
+
+???
+- Lab de IA rodava o ITS, escrito em assembly do PDP-10
+- No começo, não haviam senhas, nem era necessário logar no sistema
+- Acessível pela ARPAnet, com usuário remoto “guest” ou “tourist”.
+
+---
+class: center, middle, big-header
+
+# Hackers & hacks
+
+???
+O MIT é um dos berços da cultura hacker. Outros lugares importantes para essa
+cultura eram Harvard, Carnegie Mellon, Standford, Berkley etc. Àquela época, a
+comunidade ainda era dispersa e se encontrava “online” em sistemas como a
+ARPAnet; com o tempo, ela foi tomando forma e consciência de si própria.
+
+---
+class: middle, big-header
+
+# Definição de “hack”
+
+1. _n._ Originally, a quick job that produces what is needed, but not well.
+2. _n._ An incredibly good, and perhaps very time-consuming, piece of work that
+   produces exactly what is needed.
+
+
+---
+background-image: url(img/mit-dome.jpg)
+class: center, bottom
+
+# The McLaurin Building
+
+???
+The McLaurin Building é o cartão postal do MIT, talvez a construção mais
+importante. E, por isso mesmo, um dos locais mais cobiçados pelos hackers.
+
+---
+background-image: url(img/car-dome.gif)
+class: center, bottom
+
+# 1994
+
+???
+In May of 1994, inspired hackers created what might just become one of the most
+famous Dome hacks of all time, by placing what appeared to be a real MIT Campus
+Police cruiser on top of the dome, complete with flashing lights. More on
+http://hacks.mit.edu/Hacks/by_year/1994/cp_car/
+
+---
+background-image: url(img/r2d2-dome.jpg)
+class: center, bottom
+
+# 1999
+
+???
+On the first day of spring finals and two days before the release of Star Wars:
+The Phantom Menace, students arrived on campus to find the Great Dome
+transformed into a likeness of R2-D2, the famous droid from the Star Wars saga.
+More on http://hacks.mit.edu/Hacks/by_year/1999/r2d2/
+
+---
+background-image: url(img/rms.jpg)
+class: center, bottom
+
+# RMS: Richard Stallman (1971)
+
+???
+Um desses hackers era o RMS, cujo trabalho, à época, era melhorar o sistema
+ITS.
+
+---
+class: center, middle, big-header
+
+# “Software livre”<br /> não existia
+
+???
+- Todo software era “livre”
+- Compartilhar era comum e esperado
+
+---
+class: center, middle, big-header
+
+# 1980: PDP-10 descontinuado
+
+???
+PDP-1o descontinuado, Vax começa a ganhar tração.
+
+---
+class: center, middle, big-header
+
+# 1981: Symbolics
+
+???
+A maior parte dos membros do Laboratório de IA havia sido contratado pela
+Symbolics. Na verdade, houve uma inversão de papéis entre o MIT e essa
+companhia no que diz respeito ao interpretador LISP. Esse episódio foi um dos
+pontos fundamentais para inspirar o RMS.
+
+---
+class: center, middle, big-header
+
+# 1982: sistema<br /> não-livre da DEC
+
+???
+O MIT adquire um novo PDP-10, e decide utilizar o sistema proprietário da DEC.
+Eu suponho que, naquela época, não era lugar comum que houvesse um sistema
+incluído com a máquina. Vimos isso começar com a Apple e com a Microsoft.
+
+---
+class: center, middle, med-header
+
+# “O primeiro passo ao usar um computador era prometer não ajudar seu vizinho.”
+
+???
+Problemas com software proprietário: uma comunidade colaborante era proibida.
+Se você compartilhasse os programas, seria chamado de pirata.
+
+---
+class: center, middle, big-header
+
+# Quer mudanças? Implore.
+
+???
+O usuário também perde a autonomia. Se o software o restringe de alguma
+maneira, é refém disso. Comparar com a situação quando software proprietário
+não existia.
+
+---
+class: center, middle, big-header
+
+# Uma escolha moral: ficar ou correr?
+
+???
+RMS diz que ele poderia ter se juntado ao mundo do software proprietário, mas
+que, ao fim de sua vida, se culparia. Também poderia deixar a área da
+computação, o que, segundo ele, teria sido uma decisão muito difícil.
+
+---
+class: center, middle, big-header
+
+# Como reviver a comunidade?
+
+???
+So I looked for a way that a programmer could do something for the good. I
+asked myself, was there a program or programs that I could write, so as to make
+a community possible once again?
+
+---
+background-image: url(img/thompson-ritchie.jpg)
+class: center, bottom
+
+# Solução: SO baseado no Unix
+
+???
+Unix era um sistema portável e popular. Na foto, Dennis Ritchie e Ken Thompson
+(sentado).
+
+---
+class: center, middle, big-header, section
+
+# GNU
+
+---
+class: center, middle, big-header
+
+# GNU’s Not Unix
+
+???
+O RMS resolve chamar o sistema de GNU, um acrônimo recursivo. Mais um de seus
+hacks.
+
+---
+class: center, middle, big-header
+
+# SO completo
+
+???
+O SO era completo, ou seja, teria todo o tipo de aplicações, inclusive jogos.
+Não seria somente um kernel básico. À época, essa já era a expectativa dos
+usuários.
+
+---
+class: center, middle, big-header
+
+# “Livre”<br /> (free as in freedom)
+
+???
+O sistema também seria livre. Vamos discutir mais para frente como o RMS
+atingiu essa liberdade.
+
+---
+class: center, middle, big-header
+
+# 1984: RMS sai<br /> do MIT
+
+???
+Para evitar que o sistema caísse nas mãos do MIT, o Stallman decide sair da
+universidade. No entanto, ele é convidado a continuar usando o laboratório,
+evidenciando como a cultura hacker era forte e pessoas acreditavam no projeto.
+
+---
+class: center, middle, big-header
+
+# Sistema GNU<br /> ×<br /> Software GNU
+
+???
+Developing a whole system is a very large project. To bring it into reach, I
+decided to adapt and use existing pieces of free software wherever that was
+possible. For example, I decided at the very beginning to use TeX as the
+principal text formatter; a few years later, I decided to use the X Window
+System rather than writing another window system for GNU.
+
+---
+class: center, middle, big-header
+
+# Passos iniciais
+
+---
+class: center, middle, big-header
+
+# Free University Compiler Kit (VUCK)
+
+???
+Shortly before beginning the GNU Project, I heard about the Free University
+Compiler Kit, also known as VUCK. (The Dutch word for “free” is written with a
+v.) This was a compiler designed to handle multiple languages, including C and
+Pascal, and to support multiple target machines. I wrote to its author asking
+if GNU could use it.
+
+---
+class: center, middle, big-header
+
+# GCC
+
+???
+Ele tentou usar outro compilador chamado Pastel, mas ele exigiria muito mais
+memória do que disponível no sistema Unix do processador Motorola 68000. Assim,
+percebeu que teria de escrever um compilador ele mesmo. Esse é o GNU C
+Compiler.
+
+---
+class: center, middle, big-header
+
+# GNU Emacs
+
+???
+RMS não tinha interesse de aprender vi ou ed, então começou a portar o Emacs
+para o Unix. Em 1985, o port estava utilizável.
+
+---
+class: center, middle, big-header
+
+# $150 por fita
+
+???
+Nem todo mundo tinha acesso aos servidores de ftp, então o Richard Stallman
+começou a vender fitas com o GNU Emacs por $150.
+
+---
+class: center, middle, big-header
+
+# Software livre para quem?
+
+???
+Mas, com o Projeto GNU, surge uma questão: um programa livre não é
+necessariamente livre para todos os usuários que obtém uma cópia dele.
+
+---
+class: center, middle, big-header
+
+# Exemplo: domínio público
+
+???
+Por exemplo, software em domínio público pode ser modificado e tornado
+proprietário.
+
+---
+class: center, middle, big-header
+
+# X Windows System (MIT)
+
+???
+Algo parecido aconteceu com o X Windows System. Desenvolvido no
+MIT, muitas empresas trabalharam em cima do código e criaram. O conceito de
+“sucesso”, para o MIT, era ter muitos usuários. No entanto, o GNU tinha uma
+definição de sucesso e liberdade um tanto diferente.
+
+---
+class: center, middle, big-header
+
+# Copy<s>right</s>
+
+???
+Aqui entra o maior hack de todos, na minha opinião. Virando o copyright de
+ponta cabeça, o Projeto GNU cria o…
+
+---
+class: center, middle, big-header
+
+# Copyleft
+
+???
+Tan-tan!
+
+---
+class: center, middle, big-header
+
+# GNU General Public License (GPL)
+
+???
+A implementação específica do copyleft utilizado pelo GNU é a GPL, agora na sua
+versão 3.0. Não precisamos discutir as diferenças entre as três versões agora.
+Essa é a implementação do que “software livre” realmente significa.
+
+---
+class: center, middle, big-header
+
+# Software livre segundo a GPL
+
+???
+A GPL garante quatro liberdades, que formam a definição de software livre.
+
+---
+class: center, middle, big-header
+
+# Quatro liberdades básicas
+
+---
+class: center, middle, med-header
+
+# 0. Você tem a liberdade de executar o programa como quiser, para qualquer finalidade.
+
+---
+class: center, middle, med-header
+
+# 1. A liberdade de estudar como o programa funciona,<br/> e adaptá-lo às suas necessidades.
+
+---
+class: center, middle, med-header
+
+# 2. A liberdade de redistribuir cópias de modo que você possa ajudar ao próximo.
+
+---
+class: center, middle, med-header
+
+# 3. A liberdade de distribuir cópias de suas versões modificadas a outros.
+
+---
+class: center, middle, big-header
+
+# Importante: software livre ainda é comercializável
+
+???
+Since “free” refers to freedom, not to price, there is no contradiction between
+selling copies and free software. In fact, the freedom to sell copies is
+crucial: collections of free software sold on CD-ROMs are important for the
+community, and selling them is an important way to raise funds for free
+software development. Therefore, a program which people are not free to include
+on these collections is not free software.
+
+---
+class: center, middle, big-header, section
+
+# FSF
+
+???
+O Projeto GNU começa a chamar atenção, por meio do Emacs.
+
+---
+class: center, middle, big-header
+
+# 1985: interesse cresce
+
+???
+Com esse crescimento no interesse, decide-se criar uma instituição de caridade,
+livre de impostos, para promover o desenvolvimento de software livre. Uma das
+maneiras de levantar fundos é a venda das fitas com Emacs, responsabilidade que
+a FSF assume.
+
+---
+class: center, middle, big-header
+
+# Free Software Foundation
+
+???
+Na época, a maior parte do dinheiro arrecadado vinha da venda de software e
+manuais. Hoje, esse dinheiro vem dos membros pagantes.
+
+---
+class: center, middle, big-header
+
+# Funcionários da FSF responsáveis por muitos pacotes
+
+???
+Os funcionários que a FSF mantém são, por exemplo, responsáveis por escrever e
+manter vários pacotes, como…
+
+---
+class: center, middle, big-header
+
+# Biblioteca C (libc)
+
+???
+Any Unix-like operating system needs a C library: the library which defines the
+“system calls” and other basic facilities such as open, malloc, printf, exit…
+Escrita por: Roland McGrath.
+
+---
+class: center, middle, big-header
+
+# BASH<br /> (Bourne Again Shell)
+
+???
+Escrito pelo Brian Fox, é o shell mais comum de todos.
+
+---
+class: center, middle, big-header
+
+# Nem tudo ocorre como planejado
+
+---
+class: center, middle, big-header
+
+# GNU seria um sistema completo
+
+???
+A ideia original do RMS era desenvolver o sistema GNU completamente e depois
+lançá-lo. Isso não aconteceu. Para implementar os programas necessários,
+resolveram usar o Unix como base e substituir os binários, um a um, por
+programas GNU compatíveis. Eles foram, assim, ganhando popularidade antes mesmo
+do sistema GNU estar completo. Isso também significou que um tempo considerável
+foi gasto mantendo e portando o software.
+
+---
+class: center, middle, big-header
+
+# 1990: GNU quase completo
+
+???
+Em 1990, o sistema GNU estava quase completo. O único elemento principal que
+faltava era o kernel.
+
+---
+class: center, middle, big-header
+
+# E o kernel?
+
+---
+class: center, middle, big-header
+
+# GNU Hurd (coleção de servidores)
+
+???
+We had decided to implement our kernel as a collection of server processes
+running on top of Mach.
+
+---
+class: center, middle, big-header
+
+# Microkernel Mach
+
+???
+Mach is a microkernel developed at Carnegie Mellon University and then at the
+University of Utah; the GNU Hurd is a collection of servers (i.e., a herd of
+GNUs) that run on top of Mach, and do the various jobs of the Unix kernel.
+
+---
+class: center, middle, big-header
+
+# Ideia: facilitar debugging
+
+???
+A ideia era facilitar a correção de bugs. Como o Mach já havia sido depurado, a
+ideia era utilizar o GDB para debuggar os servidores do Hurd. No entanto, essa
+tarefa se provou muito mais difícil do inicialmente imaginaram.
+
+---
+class: center, middle, big-header, section
+
+# Linux
+
+---
+background-image: url(img/linus.jpg)
+class: center, bottom
+
+# 1991: Linus Torvalds
+
+???
+Em 1991, Linus escreve seu kernel compatível com Unix.
+
+---
+class: center, middle, big-header
+
+# Email inaugural
+
+> Hello everybody out there using minix –
+>
+> I’m doing a (free) operating system (just a hobby, won’t be big and
+> professional like gnu)…
+
+---
+class: center, middle, big-header
+
+# 1992: Linux<br /> torna-se livre
+
+???
+Em 1992, Linus decide liberar o kernel. O trabalho de juntar o software GNU com
+esse kernel não foi trivial, mas fundamental para que um sistema livre
+nascesse.
+
+---
+class: center, middle, big-header
+
+# GNU/Linux
+
+???
+Explicar como chamar o GNU/Linux de “Linux” faz as pessoas esquecerem do
+Projeto GNU.
+
+---
+class: center, middle, big-header, section
+
+# Free Software<br /> ×<br /> Open Source
+
+???
+O RMS, o Projeto GNU e a FSF rejeitam o termo “código aberto”. Por quê?
+
+---
+class: center, middle, big-header
+
+# “Livre”
+
+???
+Dizer que o software é livre implica coisas diferentes do que dizer que é
+aberto. Exemplificar com a tivoização. Problema da palavra “free” no inglês.
+
+---
+class: center, middle, big-header
+
+# Discordâncias dentro do movimento
+
+???
+Nem todo mundo no movimento de software livre concordava com as ideias. Por
+isso, houve uma cisão.
+
+---
+class: center, middle, big-header
+
+# Open Source é um termo estratégico
+
+???
+“The label “open source” was created and adopted by a group of people in the
+free software movement at a strategy session held at Palo Alto, California,
+in reaction to Netscape's January 1998 announcement of a source code release
+for Navigator.” (Wikipedia)
+
+---
+background-image: url(img/esr.jpg)
+class: center, bottom
+
+# ESR: Eric S. Raymond (1998)
+
+???
+Em 1998, Eric S. Raymond funda a Open Source Initiative.
+
+---
+class: center, middle, big-header
+
+# Open Source Initiative (OSI)
+
+---
+class: center, middle, big-header
+
+# _The Cathedral and the Bazaar_
+
+???
+ESR também escreveu um dos textos mais importantes sobre as vantagens do
+desenvolvimento aberto. Ele se tornou um dos porta-vozes do movimento.
+
+---
+class: center, middle, med-header
+
+# “O Código Aberto é<br /> uma metodologia de desenvolvimento;<br /> o Software Livre é um movimento social.” (Stallman)
+
+???
+Citação daqui: https://www.gnu.org/philosophy/open-source-misses-the-point.html
+
+---
+class: center, middle, big-header
+
+# Mas o software é praticamente o mesmo
+
+???
+Todo software livre é código aberto. O contrário não é verdade em alguns casos,
+apenas. Algumas licenças não permitem que mudanças sejam mantidas secretas, mas
+essas licenças não são comuns.
+
+---
+class: center, middle, big-header
+
+# “Tivoização”
+
+???
+Explicar o termo.
+
+---
+background-image: url(img/cute-dog.gif)
+class: center, bottom
+
+---
+class: middle, big-header
+
+# Leitura recomendada:
+
+- [The GNU Project](https://www.gnu.org/gnu/thegnuproject.html)
+- [Why Open Source misses the point of Free
+Software](https://www.gnu.org/philosophy/open-source-misses-the-point.html)
+- [Selling Free Software](https://www.gnu.org/philosophy/selling.html)
+- [gnu.org](https://gnu.org/)
+- [fsf.org](https://fsf.org/)
+
+---
+class: center, middle, big-header
+
+# Obrigado! 😃
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
